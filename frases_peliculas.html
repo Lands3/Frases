@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Emotivas y Tristes</title>
+    <link rel="stylesheet" href="css/frases_peli.css">
+</head>
+<body>
+
+    <div id="container">
+        <div class="overlay"></div> <!-- Superposición -->
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Bienvenida</a></li>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="frases.html">Frases Emotivas y Tristes</a></li>
+                <li><a href="frases_peliculas.html">Frases de Películas</a></li>
+                <li><a href="copyright.html">Copyright</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="frases-container">
+            <div class="columna">
+                <div class="frase-item">
+                    <p>No sé, tal vez todos tengan una parte de sí mismos que ocultar, 
+                        incluso de aquellos a quienes aman.</p>
+                    <video id="video1" controls autoplay loop muted>
+                        <source src="images/pet.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para iniciar la reproducción del video con sonido -->
+    <script>
+        // Obtener el elemento de video
+        var video = document.getElementById("video1");
+
+        // Reproducir el video cuando se haya cargado
+        video.addEventListener('canplay', function() {
+            // Habilitar el sonido y reproducir el video
+            video.muted = false;
+            video.play();
+        });
+
+        // Evento de clic para reproducir el video en dispositivos móviles
+        document.addEventListener('click', function() {
+            video.play();
+        });
+    </script>
+
+</body>
+</html>

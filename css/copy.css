@@ -1,0 +1,101 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    background: url('../images/paisaje.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: -1; /* Coloca la superposición detrás de todo */
+}
+
+nav {
+    background-color: rgba(51, 51, 51, 0.7); /* Fondo semitransparente para la navegación */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.bienvenida-section {
+    height: calc(100% - 60px); /* Ajusta la altura para que quede justo debajo del menú */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.bienvenida-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container {
+    margin-bottom: 30px; /* Espacio entre el logo y el título */
+}
+
+.logo {
+    max-width: 100%; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.bienvenida-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.bienvenida-content p {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .bienvenida-content h1 {
+        font-size: 2.5em;
+    }
+
+    .bienvenida-content p {
+        font-size: 1.2em;
+    }
+}
